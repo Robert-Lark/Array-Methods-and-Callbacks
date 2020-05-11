@@ -17,11 +17,11 @@ const fifaData = require('./fifa.js');
 //(e) Winner of 2014 world cup final */
 
 const worldCupFinal = fifaData.filter(match => match.Year === 2014 && match.Stage === 'Final')[0];
-console.log("TASK 1 " + (worldCupFinal["Home Team Name"]))
-console.log("TASK 1 " + (worldCupFinal["Away Team Name"]))
-console.log("TASK 1 " + (worldCupFinal["Home Team Goals"]))
-console.log("TASK 1 " + (worldCupFinal["Away Team Goals"]))
-console.log("TASK 1 " + (worldCupFinal["Win conditions"].split(3)))
+console.log("TASK 1A " + (worldCupFinal["Home Team Name"]))
+console.log("TASK 1B " + (worldCupFinal["Away Team Name"]))
+console.log("TASK 1C " + (worldCupFinal["Home Team Goals"]))
+console.log("TASK 1D " + (worldCupFinal["Away Team Goals"]))
+console.log("TASK 1E " + (worldCupFinal["Win conditions"].split(3)))
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
@@ -95,7 +95,7 @@ getWinnersInitials(finalsData);
 function getCountryWins (data, teamInitials) {
   return data.filter(item => item === teamInitials).length;
 }
-console.log("TASK 7 = " + (getCountryWins (teamInitials, 'ITA')))
+console.log("TASK 7 = " + (getCountryWins (teamInitials, 'USA')))
 
 
     /* Task 8: Write a function called `getAverageGoals` that accepts a parameter `data` and returns the the average 
@@ -123,7 +123,8 @@ console.log("TASK 7 = " + (getCountryWins (teamInitials, 'ITA')))
 
 /// STRETCH 🥅 //
 
-/* STRETCH 1: Write a function called getGoals() that accepts a parameter `data` and returns the team with the most goals score per appearance (average goals for) in the World Cup finals */
+/* STRETCH 1: Write a function called getGoals() that accepts a parameter `data` and returns 
+the team with the most goals scored per appearance (average goals for) in the World Cup finals */
 
 function getGoals(/* code here */) {
 
@@ -134,7 +135,8 @@ function getGoals(/* code here */) {
 getGoals();
 
 
-/* STRETCH 2: Write a function called badDefense() that accepts a parameter `data` and calculates the team with the most goals scored against them per appearance (average goals against) in the World Cup finals */
+/* STRETCH 2: Write a function called badDefense() that accepts a parameter `data` and calculates 
+the team with the most goals scored against them per appearance (average goals against) in the World Cup finals */
 
 function badDefense(/* code here */) {
 
